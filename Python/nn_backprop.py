@@ -351,11 +351,11 @@ def main():
   nn = NeuralNetwork(numInput, numHidden, numOutput, seed=3)
   
   print("\nLoading Iris training and test data ")
-  trainDataPath = "irisTrainData.txt"
+  trainDataPath = "./Dataset/irisTrainData.txt"
   trainDataMatrix = loadFile(trainDataPath)
   print("\nTest data: ")
   showMatrixPartial(trainDataMatrix, 4, 1, True)
-  testDataPath = "irisTestData.txt"
+  testDataPath = "./Dataset/irisTestData.txt"
   testDataMatrix = loadFile(testDataPath)
   
   maxEpochs = 50
