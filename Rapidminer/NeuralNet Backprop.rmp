@@ -70,7 +70,7 @@
         <parameter key="consider_regular_expressions" value="false"/>
         <parameter key="add_default_mapping" value="false"/>
       </operator>
-      <operator activated="true" class="nominal_to_numerical" compatibility="9.8.001" expanded="true" height="103" name="Nominal to Numerical" width="90" x="514" y="238">
+      <operator activated="true" class="nominal_to_numerical" compatibility="9.8.001" expanded="true" height="103" name="Nominal to Numerical" width="90" x="581" y="136">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="create_view" value="false"/>
         <parameter key="attribute_filter_type" value="subset"/>
@@ -91,7 +91,7 @@
         <parameter key="unexpected_value_handling" value="all 0 and warning"/>
         <parameter key="use_underscore_in_name" value="false"/>
       </operator>
-      <operator activated="true" class="numerical_to_polynominal" compatibility="9.8.001" expanded="true" height="82" name="Numerical to Polynominal" width="90" x="715" y="238">
+      <operator activated="true" class="numerical_to_polynominal" compatibility="9.8.001" expanded="true" height="82" name="Numerical to Polynominal" width="90" x="112" y="289">
         <parameter key="attribute_filter_type" value="single"/>
         <parameter key="attribute" value="Survived"/>
         <parameter key="attributes" value=""/>
@@ -105,7 +105,7 @@
         <parameter key="invert_selection" value="false"/>
         <parameter key="include_special_attributes" value="false"/>
       </operator>
-      <operator activated="true" class="replace_missing_values" compatibility="9.8.001" expanded="true" height="103" name="Replace Missing Values (2)" width="90" x="782" y="85">
+      <operator activated="true" class="replace_missing_values" compatibility="9.8.001" expanded="true" height="103" name="Replace Missing Values (2)" width="90" x="246" y="289">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="create_view" value="false"/>
         <parameter key="attribute_filter_type" value="single"/>
@@ -124,7 +124,7 @@
         <list key="columns"/>
         <parameter key="replenishment_value" value="S"/>
       </operator>
-      <operator activated="true" class="replace_missing_values" compatibility="9.8.001" expanded="true" height="103" name="Replace Missing Values" width="90" x="916" y="85">
+      <operator activated="true" class="replace_missing_values" compatibility="9.8.001" expanded="true" height="103" name="Replace Missing Values" width="90" x="380" y="289">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="create_view" value="false"/>
         <parameter key="attribute_filter_type" value="single"/>
@@ -142,14 +142,14 @@
         <parameter key="default" value="average"/>
         <list key="columns"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="9.8.001" expanded="true" height="82" name="Set Role" width="90" x="1050" y="85">
+      <operator activated="true" class="set_role" compatibility="9.8.001" expanded="true" height="82" name="Set Role" width="90" x="581" y="289">
         <parameter key="attribute_name" value="Survived"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles">
           <parameter key="Survived" value="label"/>
         </list>
       </operator>
-      <operator activated="true" class="concurrency:cross_validation" compatibility="9.8.001" expanded="true" height="145" name="Cross Validation" width="90" x="1184" y="34">
+      <operator activated="true" class="concurrency:cross_validation" compatibility="9.8.001" expanded="true" height="145" name="Cross Validation" width="90" x="782" y="136">
         <parameter key="split_on_batch_attribute" value="false"/>
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_folds" value="10"/>
@@ -158,7 +158,7 @@
         <parameter key="local_random_seed" value="1992"/>
         <parameter key="enable_parallel_execution" value="true"/>
         <process expanded="true">
-          <operator activated="true" class="neural_net" compatibility="9.8.001" expanded="true" height="82" name="Neural Net" width="90" x="179" y="85">
+          <operator activated="true" class="neural_net" compatibility="9.8.001" expanded="true" height="82" name="Neural Net" width="90" x="179" y="34">
             <list key="hidden_layers">
               <parameter key="layer1" value="6"/>
               <parameter key="layer2" value="4"/>
@@ -242,8 +242,12 @@
       <portSpacing port="sink_result 3" spacing="0"/>
       <portSpacing port="sink_result 4" spacing="0"/>
       <portSpacing port="sink_result 5" spacing="0"/>
-      <description align="left" color="yellow" colored="false" height="157" resized="false" width="180" x="29" y="207">Here, the basic titanic.csv dataset provided in the current directory is imported and preprocessed by changing the target labels to the ones required by Naive Bayes</description>
-      <description align="left" color="yellow" colored="false" height="157" resized="false" width="180" x="828" y="251">Then missing values in 'Age' attribute is filled with the average of the existing values. The missing values in 'Embarked' is replaced with the most frequent value, which is 'S'.</description>
+      <description align="left" color="yellow" colored="false" height="157" resized="false" width="180" x="99" y="413">Here, the basic titanic.csv dataset provided in the current directory is imported and preprocessed by changing the target labels to the ones required by the Neural Network.</description>
+      <description align="left" color="yellow" colored="false" height="157" resized="false" width="180" x="367" y="415">Then missing values in 'Age' attribute is filled with the average of the existing values. The missing values in 'Embarked' is replaced with the most frequent value, which is 'S'.</description>
+      <description align="center" color="yellow" colored="false" height="50" resized="true" width="123" x="152" y="173">Drop unnecessary columns&lt;br&gt;</description>
+      <description align="center" color="yellow" colored="false" height="68" resized="true" width="116" x="303" y="172">Map Cabin values to numeric</description>
+      <description align="center" color="yellow" colored="false" height="50" resized="true" width="125" x="439" y="176">Map Sex values to binary&lt;br/&gt;</description>
+      <description align="center" color="yellow" colored="false" height="52" resized="true" width="134" x="580" y="384">Make &amp;quot;Survived&amp;quot; as output column</description>
     </process>
   </operator>
 </process>
