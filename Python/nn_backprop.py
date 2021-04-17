@@ -327,7 +327,7 @@ def main():
   print("\nLoading Iris training and test data ")
   trainDataPath = "../Dataset/irisTrainData.txt"
   trainDataMatrix = loadFile(trainDataPath)
-  print("\nTest data: ")
+  print("\nTrain data: ")
   showMatrixPartial(trainDataMatrix, 4, 1, True)
   testDataPath = "../Dataset/irisTestData.txt"
   testDataMatrix = loadFile(testDataPath)
